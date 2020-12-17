@@ -75,17 +75,6 @@
         display: block;
             border-style: double;
     }
-
-    .komentari {
-        margin-right: 156px;
-    }
-
-  footer {
-      text-align: center;
-      font-weight: bold;
-      font-size: large;
-  }
-
   .like {
       height: 100%;
       width: 32%;
@@ -114,22 +103,10 @@
       font-style: oblique;
   }
  
-
   address {
     text-align: center;
   }
 
-  .muzika {
-      color: blue;
-  }
-
-  .filmovi {
-      color: green;
-  }
-
-  .hrana {
-      color: red;
-  }
   #txt {
     font-size: 40px;
     font-family: 'Trebuchet MS';
