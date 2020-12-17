@@ -1,3 +1,5 @@
+var Ime = prompt("Vnesi ime");
+           alert("Zdravo " + Ime);
 function startTime() {
     var today = new Date();
     var h = today.getHours();
