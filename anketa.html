@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function ThankYou()
+        {
+             var x=document.getElementById("name").value;
+             var y=document.getElementById("surname").value;
+             var text=x + ' ' + y;
+   alert("Ви благодарам за пополнување на анкетата " + text)
+          }
+    </script>
+</head>
+
+<body>
+    <header>
+        <section>
+            <nav>
+                <br>
+                <a href='index.html'>Дома</a>
+                <a href='omileni.html'>Омилени работи</a>
+                <a href='galerija.html'>Галерија</a>
+                <a href='blog.html'>Блог</a>
+                <a href='anketa.html'>Анкета</a>
+            </nav>
+
+        </section>
+    </header>
+
+    <h1>Анкета</h1>
+    <br> 
+    <section style="text-align: center;">
+    <div style="text-align: center">
+    <form action="nova godina.html">
+         <label>Име:
+            <input id="name" name="name" type="text" size="20" maxlength="15" required>
+        </label>
+        <br>
+        <br>
+        <label>Презиме:
+            <input id="surname" name="surname" type="text" size="25" maxlength="15">
+        </label>
+        <br><br>
+
+        Пол:
+        <label>М
+            <input name="thingsliked" type="radio"></label>
+        <label>Ж
+            <input name="thingsliked" type="radio"></label>
+        <br><br>
+
+
+        <label>Email:
+            <input type="email" placeholder="username@domain.com"  />
+        </label>
+
+        <br><br>
+
+        <label>Датум на раѓање:
+            <input type="date"/>
+        </label>
+
+
+        <br><br>
+
+        Твоите омилени табови:<br>
+        <label>Дома
+            <input name="thingsliked" type="checkbox" value="Дома"></label>
+        <label>Омилени работи
+            <input name="thingsliked" type="checkbox" value="Омилени"></label>
+        <label>Галерија
+            <input name="thingsliked" type="checkbox" value="ГАЛЕРИЈА"></label>
+        <label>Блог
+            <input name="thingsliked" type="checkbox" value="БЛОГ"></label>
+
+        <br><br>
+        <h4>Oценкa:</h4>
+            <input type="range" id="vol" name="vol" min="0" max="10">
+        <br><br>
+
+        <label>Оставете коментар:<br><br>
+            <textarea name="comments" rows="5" cols="60" placeholder="Comment here"></textarea>
+        </label>
+        <br><br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>    
+        <input type="submit" value="Приложи">
+        <input type="reset" value="Избриши">
+    </form>
+</div>
+</section>
+
+<br>
+
+    <footer>
+        Андреа Ивановска &copy; FEIT 2020
+    </footer>
+</body>
+
+</html>

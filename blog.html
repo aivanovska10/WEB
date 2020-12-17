@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html id="blog">
+<head>
+    <meta charset="UTF-8">
+    <title>Блог</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="blog.js"> </script> 
+</head>
+<body>
+
+    <header>
+        <section>
+            <nav>
+                <br>
+                <a href='index.html'>Дома</a>
+                <a href='omileni.html'>Омилени работи</a>
+                <a href='galerija.html'>Галерија</a>
+                <a href='blog.html'>Блог</a>
+                <a href='anketa.html'>Анкета</a>
+            </nav>
+
+        </section>
+    </header>
+
+    
+    <section>
+        <h1>Блог</h1>
+            <br>
+        <div>
+
+            <div style="margin-bottom: 5px; 
+                        color: white; 
+                        padding: 8px;
+                        text-align: center;
+                        background-color: rgba(15, 48, 87, 0.6);
+                        border-radius: 10px;"> Твоето Име: 
+            <input type="text" id="post-user-input" 
+                style="margin-bottom: 5px; padding: 5px; border-radius: 5px; " /></div>
+            <div style="margin-bottom: 5px; 
+                        color: rgb(255, 255, 255); 
+                        padding: 8px;
+                        text-align: center;
+                        background-color: rgba(0, 22, 49, 0.6);
+                        border-radius: 10px;"> <span style="margin-top:0%;">Внеси текст:</span>
+            <textarea name="text" id="post-text-input" rows="4" cols="50"> </textarea></div>
+
+            <button style="float:right;" type="submit" id="post-submit" > Submit </button><br><br>
+            <fieldset style="text-align: center;">
+                   <div id="blog-posts">
+            </fieldset>
+            </div>
+        </div>  
+    </section>
+
+    <section style="background-color: rgb(255, 255, 255); width: 38%; border: bisque; border-radius: 15px; margin-left: 10%;">
+
+        <div >
+            <h2>Where the Namib Desert meets the Sea</h2>
+            <h5>KAUSHIK PATOWARY  APR 9, 2013</h5>
+            <div style="height:390px; background-image: url(viks.jpg);background-repeat: no-repeat; 
+            background-size:auto;">
+            </div>
+            <p> The Southern Namib desert is home to some of the tallest and most spectacular dunes of the world,
+                 ranging in color from pink to vivid orange. 
+                 These dunes continue right to the edge of the Atlantic Ocean.
+                 The cold waters of the sea brushing against the dunes of the Namib desert is one of the most surreal sights. <br>
+                <a style="color: black;" href="https://www.amusingplanet.com/2013/04/where-namib-desert-meets-sea.html">read more</a>
+            </p>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div>
+            <a class="weatherwidget-io" href="https://forecast7.com/en/42d0021d43/skopje/" data-label_1="SKOPJE"
+                 data-font="Arimo" data-icons="Climacons Animated" data-theme="original">
+            </a>
+            <script>
+                ! function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = 'https://weatherwidget.io/js/widget.min.js';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }
+                    (document, 'script', 'weatherwidget-io-js');
+            </script>
+        </div>
+        Андреа Ивановска &copy; FEIT 2020
+    </footer>
+</body>
+</html>

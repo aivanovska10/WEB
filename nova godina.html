@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>New Year</title>
+    <script>
+        var countDownDate = new Date("Jan 1, 2021 00:00:00").getTime();
+        var x = setInterval(function () {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("counter").innerHTML = days + "d " + hours + "h " +
+        minutes + "m " + seconds + "s ";
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+        }, 1000);
+    </script>
+</head>
+
+    <body style="background-image: url('nova.jpg');">
+        <section style="background-color: rgb(255, 255, 255); width: 38%; border: bisque; border-radius: 15px; margin-left: 30%;
+        margin-top: 20%;">
+            <h2 style="text-align: center;">Среќни празници</h2>
+            <div class="fakeimg" id="counter" style="font-size: 60pt; text-align: center;"> </div>
+        </section>
+        
+            </body>
+            </html>
+    

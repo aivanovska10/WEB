@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерија</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script1.js">
+    </script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+            var likes1 = 0;
+            var likes2 = 0;
+            var likes3 = 0;
+            $(document).ready(function(){
+
+                var lajkovi1;
+                var lajkovi2;
+                var lajkovi3;
+
+                $("#slika1").dblclick(function(){
+                    likes1++;
+                    document.getElementById("likes1").innerHTML = likes1;
+                    localStorage.setItem("lajkovi1", likes1);
+                });
+
+                $("#slika2").dblclick(function(){
+                    likes2++;
+                    document.getElementById("likes2").innerHTML = likes2;
+                });
+
+                $("#slika3").dblclick(function(){
+                    likes3++;
+                    document.getElementById("likes3").innerHTML = likes3;
+                });           
+                
+            });
+    </script>
+    <script type="text/javascript">
+        var guest = prompt("Hello? Who are you?");
+            
+
+        function comment1() {
+            event.preventDefault()
+            let t1 = document.getElementById("input1").value;
+            let comm1 = JSON.parse(localStorage.getItem('comments1')) || [];
+            var datum1 = new Date();
+            t1 = guest + ': ' + t1 + '<br>' + datum1.toString();
+            comm1.push(t1)
+            localStorage.setItem('comments1', JSON.stringify(comm1))
+            console.log(comm1)
+            let newString1 = ""
+            comm1.forEach(element => {
+                newString1 += element
+                newString1 += "<hr>"
+            });
+            document.getElementById("comment1").innerHTML = newString1;
+        }
+        function comment2() {
+            event.preventDefault()
+            let t2 = document.getElementById("input2").value;
+            let comm2 = JSON.parse(localStorage.getItem('comments2')) || [];
+            var datum2 = new Date();
+            t2 = guest + ': ' + t2 + '<br>' + datum2.toString();
+            comm2.push(t2)
+            localStorage.setItem('comments2', JSON.stringify(comm2))
+            console.log(comm2)
+            let newString2 = ""
+            comm2.forEach(element => {
+                newString2 += element
+                newString2 += "<hr>"
+            });
+            document.getElementById("comment2").innerHTML = newString2;
+        }
+        function comment3() {
+            event.preventDefault()
+            let t3 = document.getElementById("input3").value;
+            let comm3 = JSON.parse(localStorage.getItem('comments3')) || [];
+            var datum3 = new Date();
+            t3 = guest + ': ' + t3 + '<br>' + datum3.toString();
+            comm3.push(t3)
+            localStorage.setItem('comments3', JSON.stringify(comm3))
+            console.log(comm3)
+            let newString3 = ""
+            comm3.forEach(element => {
+                newString3 += element
+                newString3 += "<hr>"
+            });
+            document.getElementById("comment3").innerHTML = newString3;
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <section>
+            <nav>
+                <br>
+                <a href='index.html'>Дома</a>
+                <a href='omileni.html'>Омилени работи</a>
+                <a href='galerija.html'>Галерија</a>
+                <a href='blog.html'>Блог</a>
+                <a href='anketa.html'>Анкета</a>
+            </nav>
+
+        </section>
+    </header>
+    <h1>Моја мини галерија</h1>
+    <section>
+        
+        <div class="like">
+            <img id="slika1" src="slika1.jpg" alt="slika1" class="galerija">
+            <p style="font-weight: bold; font-size: 14px; text-align:center;">&hearts;<span id="likes1"> 0</span></p>
+
+            <div id="box">
+                <p id="comment1" ></p>
+                <form onsubmit="comment1()">
+                    <input type="text" id="input1" placeholder="Enter comment" autocapitalize="off" />
+                    <input type="submit" id="submitbutton" value="Add comment">
+                </form>
+            </div>
+        </div>
+        <div class="like">
+            <img id="slika2" src="slika2.jpg" alt="slika2" class="galerija">
+            <p style="font-weight: bold; font-size: 14px; text-align:center;">&hearts;<span id="likes2"> 0</span></p>
+            <div id="box">
+                <p id="comment2"></p>
+                <form onsubmit="comment2()">
+                    <input type="text" id="input2" placeholder="Enter comment" autocapitalize="off" />
+                    <input type="submit" id="submitbutton" value="Add comment">
+                </form>
+            </div>
+        </div>
+        <div class="like">
+            <img id = "slika3" src="slika3.jpg" alt="slika3" class="galerija">
+            <p style="font-weight: bold; font-size: 14px; text-align:center;">&hearts;<span id="likes3"> 0</span></p>
+            <div id="box">
+                <p id="comment3"></p>
+                <form onsubmit="comment3()">
+                    <input type="text" id="input3" placeholder="Enter comment" autocapitalize="off" />
+                    <input type="submit" id="submitbutton" value="Add comment">
+                </form>
+            </div>
+        </div>
+</section>
+
+
+    <footer>
+        Андреа Ивановска &copy; FEIT 2020
+    </footer>
+</body>
+</html>
